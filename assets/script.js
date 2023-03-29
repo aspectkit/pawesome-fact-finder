@@ -158,15 +158,16 @@ async function getCatFact(){
 $(function (){
     getFacts();
 
-    catButton.innerHTML = "Cat Button";
-    dogButton.innerHTML = "Dog Button";
-    luckyButton.innerHTML = "I'm feeling Lucky!";
+    catButton.innerHTML = "Cat Facts";
+    dogButton.innerHTML = "Dog Facts";
+    luckyButton.innerHTML = "Randomize ME!";
 
     catButton.style.display = "block";
     dogButton.style.display = "block";
 
 
     catImg.setAttribute("alt", "Random image of a cat");
+    catImg.setAttribute('class', 'floatRight')
     dogImg.setAttribute("alt", "Random image of a dog");
 
     document.body.appendChild(catButton);
