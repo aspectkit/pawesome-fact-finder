@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/css/uikit.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit-icons.min.js"></script>
     <title>Pet Viewer</title>
   </head>
 
-  <body>
-    <div>
-      <h1>Dogs</h1>
+  <body class="uk-heading-medium">
+      <h1 class="header uk-heading-line uk-text-center"><span>Facts Boi</span></h1>
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card-media-left uk-cover-container">
+            <img src="./assets/Pics/unnamed.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Dogs</h3>
+                <p>Append dog facts here.</p>
+                <button>dog button here</button>
+            </div>
+        </div>
     </div>
-
-    <div>
-      <h1>Cats</h1>
+    
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+            <img src="./assets/Pics/download.jpg" alt="" uk-cover>
+            <canvas width="600" height="400"></canvas>
+        </div>
+        <div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Cats</h3>
+                <p>Append cat facts here.</p>
+                <button id="catButton">cat button here</button>
+            </div>
+        </div>
     </div>
-    <p>=======</p>
-  </body>
-
+    <div class="uk-heading-line uk-text-center">
+        <button>Randomize button here</button>
+    </div>
+      <p>=======</p><br>
+    </body>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>

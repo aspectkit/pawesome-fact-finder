@@ -157,15 +157,18 @@ async function getCatFact(){
 // main function ~ adds buttons to screen and adds alt text to imgs
 $(function (){
     getFacts();
+
     catButton.innerHTML = "Cat Button";
     dogButton.innerHTML = "Dog Button";
     luckyButton.innerHTML = "I'm feeling Lucky!";
+
 
     catButton.style.display = "block"; // temporary delete later when css is all good
     dogButton.style.display = "block";
 
 
     catImg.setAttribute("alt", "Random image of a cat");
+    catImg.setAttribute('class', 'floatRight')
     dogImg.setAttribute("alt", "Random image of a dog");
 
     document.body.appendChild(catButton);
