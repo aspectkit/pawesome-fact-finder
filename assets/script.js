@@ -23,15 +23,18 @@ var catText = document.createElement("h2");
 var dogText = document.createElement("h2");
 
 
-var allFacts = JSON.parse(localStorage.getItem("facts"));
 
-if (allFacts === null){
-    allFacts = [];
+
+function getFacts(){
+    allFacts = JSON.parse(localStorage.getItem("facts"));
+    if (allFacts === null){
+        allFacts = [];
+    }
 }
 
 // events to listen for when one of the 3 buttons is pressed. Once pressed, the variables to store results are reset and the picture and fact function is called
 catButton.addEventListener("click", function(){
-    allFacts = JSON.parse(localStorage.getItem("facts"));
+    getFacts();
     catFact = "";
     catPic = "";
     getCatPicture();
@@ -40,7 +43,7 @@ catButton.addEventListener("click", function(){
 });
 
 dogButton.addEventListener("click", function(){
-    allFacts = JSON.parse(localStorage.getItem("facts"));
+    getFacts();
     dogFact = "";
     dogPic = "";
     getDogPicture();
@@ -49,7 +52,7 @@ dogButton.addEventListener("click", function(){
 });
 
 luckyButton.addEventListener("click", function(){
-    allFacts = JSON.parse(localStorage.getItem("facts"));
+    getFacts();
     dogFact = "";
     dogPic = "";
     catFact = "";
@@ -153,9 +156,14 @@ async function getCatFact(){
 
 // main function ~ adds buttons to screen and adds alt text to imgs
 $(function (){
+    getFacts();
+
     catButton.innerHTML = "Cat Button";
     dogButton.innerHTML = "Dog Button";
     luckyButton.innerHTML = "I'm feeling Lucky!";
+
+    catButton.style.display = "block";
+    dogButton.style.display = "block";
 
 
     catImg.setAttribute("alt", "Random image of a cat");
@@ -165,5 +173,6 @@ $(function (){
     document.body.appendChild(luckyButton);
     document.body.appendChild(dogButton);
 
-    console.log("hello world!")
-})
+    
+});
+
