@@ -24,7 +24,7 @@ var dogText = document.createElement("h2");
 
 
 
-
+// this function gets all the facts from local storage as an array
 function getFacts(){
     allFacts = JSON.parse(localStorage.getItem("facts"));
     if (allFacts === null){
@@ -93,7 +93,7 @@ async function getDogPicture(){
 async function getDogFact(){
     console.log("DOG FACT!");
 
-    do {
+    do { // does once to get a fact and then keeps getting facts if the fact is already in local storage ~ loop ends when its a new fact
     fetch(dogFactURL)
         .then(function (response){
             return response.json();
@@ -108,7 +108,7 @@ async function getDogFact(){
     await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
     dogText.innerHTML = dogFact;
     allFacts.push(dogFact);
-    localStorage.setItem('facts', JSON.stringify(allFacts));
+    localStorage.setItem('facts', JSON.stringify(allFacts)); // adds new fact to array and to local storage
     document.body.appendChild(dogText);
 
 }
@@ -135,7 +135,7 @@ async function getCatPicture(){
 async function getCatFact(){
     console.log("CAT FACT!");
 
-    do {
+    do { // does once to get a fact and then keeps getting facts if the fact is already in local storage ~ loop ends when its a new fact
     fetch(catFactURL)
         .then(function (response){
             return response.json();
@@ -149,7 +149,7 @@ async function getCatFact(){
 
     await delay(1000); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
     allFacts.push(catFact);
-    localStorage.setItem('facts', JSON.stringify(allFacts));
+    localStorage.setItem('facts', JSON.stringify(allFacts)); // adds new fact to array and to local storage
     catText.innerHTML = catFact;
     document.body.appendChild(catText);
 }
@@ -157,12 +157,11 @@ async function getCatFact(){
 // main function ~ adds buttons to screen and adds alt text to imgs
 $(function (){
     getFacts();
-
     catButton.innerHTML = "Cat Button";
     dogButton.innerHTML = "Dog Button";
     luckyButton.innerHTML = "I'm feeling Lucky!";
 
-    catButton.style.display = "block";
+    catButton.style.display = "block"; // temporary delete later when css is all good
     dogButton.style.display = "block";
 
 
