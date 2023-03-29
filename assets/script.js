@@ -11,6 +11,7 @@ var dogFact = "";
 var dogPic = "";
 
 
+
 // elements to show results on screen ~ in future we can create these elements in the html where we want them and then replace 
 // these with getElementByID
 var catButton = document.createElement("button");
@@ -22,22 +23,36 @@ var catText = document.createElement("h2");
 var dogText = document.createElement("h2");
 
 
+
+
+function getFacts(){
+    allFacts = JSON.parse(localStorage.getItem("facts"));
+    if (allFacts === null){
+        allFacts = [];
+    }
+}
+
 // events to listen for when one of the 3 buttons is pressed. Once pressed, the variables to store results are reset and the picture and fact function is called
 catButton.addEventListener("click", function(){
+    getFacts();
     catFact = "";
     catPic = "";
     getCatPicture();
     getCatFact();
+
 });
 
 dogButton.addEventListener("click", function(){
+    getFacts();
     dogFact = "";
     dogPic = "";
     getDogPicture();
     getDogFact();
+
 });
 
 luckyButton.addEventListener("click", function(){
+    getFacts();
     dogFact = "";
     dogPic = "";
     catFact = "";
@@ -77,6 +92,8 @@ async function getDogPicture(){
 // once the dog/lucky button is pressed this function calls the api to get the dog fact and sets it to the element and displays it on page
 async function getDogFact(){
     console.log("DOG FACT!");
+
+    do {
     fetch(dogFactURL)
         .then(function (response){
             return response.json();
@@ -86,9 +103,12 @@ async function getDogFact(){
             dogFact = data.data[0].attributes.body;
             console.log("Here is the dog fact: " + dogFact);
         })
+    } while(dogFact in allFacts);
 
     await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
     dogText.innerHTML = dogFact;
+    allFacts.push(dogFact);
+    localStorage.setItem('facts', JSON.stringify(allFacts));
     document.body.appendChild(dogText);
 
 }
@@ -114,6 +134,8 @@ async function getCatPicture(){
 // once the cat/lucky button is pressed this function calls the api to get the dog fact and sets it to the element and displays it on page
 async function getCatFact(){
     console.log("CAT FACT!");
+
+    do {
     fetch(catFactURL)
         .then(function (response){
             return response.json();
@@ -123,17 +145,26 @@ async function getCatFact(){
             catFact = data.data[0];
             console.log("Here is the cat fact: " + catFact);
         })
+    } while (catFact in allFacts);
 
     await delay(1000); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
+    allFacts.push(catFact);
+    localStorage.setItem('facts', JSON.stringify(allFacts));
     catText.innerHTML = catFact;
     document.body.appendChild(catText);
 }
 
 // main function ~ adds buttons to screen and adds alt text to imgs
 $(function (){
+    getFacts();
+
     catButton.innerHTML = "Cat Button";
     dogButton.innerHTML = "Dog Button";
     luckyButton.innerHTML = "I'm feeling Lucky!";
+
+    catButton.style.display = "block";
+    dogButton.style.display = "block";
+
 
     catImg.setAttribute("alt", "Random image of a cat");
     dogImg.setAttribute("alt", "Random image of a dog");
@@ -141,4 +172,7 @@ $(function (){
     document.body.appendChild(catButton);
     document.body.appendChild(luckyButton);
     document.body.appendChild(dogButton);
-})
+
+    
+});
+
