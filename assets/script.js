@@ -75,9 +75,6 @@ luckyButton.addEventListener("click", function(){
     getDogFact();
 })
 
-// homeBox for page reload on homeButton
-var homeBox = $(homeBox);
-
 homeButton.addEventListener("click", function(){
   // reloads page (default)
   window.location.reload();
