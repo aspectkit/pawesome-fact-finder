@@ -10,7 +10,15 @@ var catPic = "";
 var dogFact = "";
 var dogPic = "";
 
+<<<<<<< HEAD
 // elements to show results on screen ~ in future we can create these elements in the html where we want them and then replace
+=======
+// this constant defines how many unique facts the user has to have seen before they can see a fact they've already seen 
+// this is so that long term the website wont stop giving facts even if all the unique facts have been seen and put into local_storage
+const MAX_UNIQUE_FACTS = 100;
+
+// elements to show results on screen ~ in future we can create these elements in the html where we want them and then replace 
+>>>>>>> main
 // these with getElementByID
 var catButton = document.getElementById("catButton");
 var dogButton = document.getElementById("dogButton");
@@ -28,34 +36,51 @@ function getFacts() {
   }
 }
 
+// this function resets the local storage array if max unique facts has been reached
+function cleanFacts() {  
+    getFacts();
+
+    if (allFacts.length >= MAX_UNIQUE_FACTS){
+        allFacts = [];
+        localStorage.setItem('facts', JSON.stringify(allFacts));
+    }
+}
+
 // events to listen for when one of the 3 buttons is pressed. Once pressed, the variables to store results are reset and the picture and fact function is called
-catButton.addEventListener("click", function () {
-  getFacts();
-  catFact = "";
-  catPic = "";
-  getCatPicture();
-  getCatFact();
+catButton.addEventListener("click", function(){
+    cleanFacts();
+    getFacts();
+    getCatPicture();
+    getCatFact();
+    homeButton.style.display = "block"
+    catBox.style.display = "block"
+    dogBox.style.display = "none"
 });
 
-dogButton.addEventListener("click", function () {
-  getFacts();
-  dogFact = "";
-  dogPic = "";
-  getDogPicture();
-  getDogFact();
+dogButton.addEventListener("click", function(){
+    cleanFacts();
+    getFacts();
+    getDogPicture();
+    getDogFact();
+    homeButton.style.display = "block"
+    dogBox.style.display = "block"
+    catBox.style.display = "none"
 });
 
-luckyButton.addEventListener("click", function () {
-  getFacts();
-  dogFact = "";
-  dogPic = "";
-  catFact = "";
-  catPic = "";
-  getCatPicture();
-  getCatFact();
-  getDogPicture();
-  getDogFact();
-});
+luckyButton.addEventListener("click", function(){
+    cleanFacts();
+    getFacts();
+    getCatPicture();
+    getCatFact();
+    getDogPicture();
+    getDogFact();
+})
+
+homeButton.addEventListener("click", function(){
+    homeButton.style.display = "block"
+    dogBox.style.display = "block"
+    catBox.style.display = "block"
+})
 
 // this function times out the script for a specific amount of milliseconds
 function delay(milliseconds) {
