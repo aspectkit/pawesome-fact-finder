@@ -23,8 +23,9 @@ var catImg = document.createElement("img");
 var dogImg = document.createElement("img");
 var catText = document.createElement("h2");
 var dogText = document.createElement("h2");
-
-
+var homeButton = document.getElementById("homeButton");
+var catBox = document.getElementById("catBox");
+var dogBox = document.getElementById("dogBox");
 
 // this function gets all the facts from local storage as an array
 function getFacts(){
@@ -50,7 +51,9 @@ catButton.addEventListener("click", function(){
     getFacts();
     getCatPicture();
     getCatFact();
-
+    homeButton.style.display = "block"
+    catBox.style.display = "block"
+    dogBox.style.display = "none"
 });
 
 dogButton.addEventListener("click", function(){
@@ -58,7 +61,9 @@ dogButton.addEventListener("click", function(){
     getFacts();
     getDogPicture();
     getDogFact();
-
+    homeButton.style.display = "block"
+    dogBox.style.display = "block"
+    catBox.style.display = "none"
 });
 
 luckyButton.addEventListener("click", function(){
@@ -68,6 +73,12 @@ luckyButton.addEventListener("click", function(){
     getCatFact();
     getDogPicture();
     getDogFact();
+})
+
+homeButton.addEventListener("click", function(){
+    homeButton.style.display = "block"
+    dogBox.style.display = "block"
+    catBox.style.display = "block"
 })
 
 // this function times out the script for a specific amount of milliseconds
@@ -184,4 +195,3 @@ $(function (){
 
     
 });
-
