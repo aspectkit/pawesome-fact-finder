@@ -23,6 +23,9 @@ var catImg = document.createElement("catImg");
 var dogImg = document.createElement("dogImg");
 var catText = document.getElementById("catText");
 var dogText = document.getElementById("dogText");
+var homeButton = document.getElementById("homeButton");
+var catBox = document.getElementById("catBox");
+var dogBox = document.getElementById("dogBox");
 
 // this function gets all the facts from local storage as an array
 function getFacts() {
