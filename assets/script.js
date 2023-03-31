@@ -44,15 +44,13 @@ function cleanFacts() {
         localStorage.setItem('facts', JSON.stringify(allFacts));
     }
 }
-
+var dbox
 // events to listen for when one of the 3 buttons is pressed. Once pressed, the variables to store results are reset and the picture and fact function is called
 catButton.addEventListener("click", function(){
     cleanFacts();
     getFacts();
     getCatPicture();
     getCatFact();
-    homeButton.style.display = "block"
-    catBox.style.display = "block"
     dogBox.style.display = "none"
 });
 
@@ -61,8 +59,6 @@ dogButton.addEventListener("click", function(){
     getFacts();
     getDogPicture();
     getDogFact();
-    homeButton.style.display = "block"
-    dogBox.style.display = "block"
     catBox.style.display = "none"
 });
 
