@@ -19,38 +19,41 @@
     <h1 class="header uk-heading-line uk-text-center">
       <span>Facts Boi</span>
     </h1>
-    <div
-      class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
-      uk-grid
-    >
+
+    <nav>
+        <button id="homeButton" class="home uk-button uk-button-default uk-width-1-1 uk margin-small-button">Home</button>
+    </nav>
+
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">
         <img id="dogImg" src="./assets/Pics/unnamed.jpg" alt="" uk-cover />
         <canvas width="600" height="400"></canvas>
       </div>
-      <div>
+
+      <div id="dogBox">
         <div class="uk-card-body">
           <h3 class="uk-card-title">Dogs</h3>
           <p id="dogText">Append dog facts here</p>
           <button id="dogButton">WOOF!</button>
         </div>
       </div>
+
     </div>
 
-    <div
-      class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
-      uk-grid
-    >
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
         <img id="catImg" src="./assets/Pics/download.jpg" alt="" uk-cover />
         <canvas width="600" height="400"></canvas>
       </div>
-      <div>
+
+      <div id="catBox">
         <div class="uk-card-body">
           <h3 class="uk-card-title">Cats</h3>
           <p id="catText">Append cat facts here.</p>
           <button id="catButton">MEOW!</button>
         </div>
       </div>
+
     </div>
 
     <div class="uk-heading-line uk-text-center">
