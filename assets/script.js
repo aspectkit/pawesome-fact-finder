@@ -51,8 +51,6 @@ catButton.addEventListener("click", function(){
     getFacts();
     getCatPicture();
     getCatFact();
-    homeButton.style.display = "block"
-    catBox.style.display = "block"
     dogBox.style.display = "none"
 });
 
@@ -61,8 +59,6 @@ dogButton.addEventListener("click", function(){
     getFacts();
     getDogPicture();
     getDogFact();
-    homeButton.style.display = "block"
-    dogBox.style.display = "block"
     catBox.style.display = "none"
 });
 
@@ -76,9 +72,8 @@ luckyButton.addEventListener("click", function(){
 })
 
 homeButton.addEventListener("click", function(){
-    homeButton.style.display = "block"
-    dogBox.style.display = "block"
-    catBox.style.display = "block"
+  // reloads page (default)
+  window.location.reload();
 })
 
 // this function times out the script for a specific amount of milliseconds
