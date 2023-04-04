@@ -12,18 +12,10 @@
 .smallNav:hover{
     box-shadow: springgreen;
 }
-.floatLeft {
-    float: left;
-    margin: 0px;
-    padding: 0px;
-    width: 30vh;
-}
-
-.floatRight {
-    float: right;
-    margin: 0px;
-    padding: 0px;
-    width: 30vh;
+.imagePlaceholder{
+  background: url('./') no-repeat;
+  width:200px;
+  height:200px;
 }
 /* ----------pop up msg for doc & cat-------------------------------------------- */
 /* The Modal (background) */
