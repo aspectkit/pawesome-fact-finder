@@ -2,6 +2,18 @@
     margin: 0;
     padding: 0;
 }
+
+button{
+  border: solid grey;
+  text-align: center;
+  padding: 10px 25px;
+    font-size: 16px;
+}
+button:hover {
+  background-color: #0974b2;
+  color: white;
+}
+
 .header{
     color: red;
     font-size: 100px;
