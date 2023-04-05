@@ -1,6 +1,7 @@
 // urls to api calls
 var catFactURL = "https://meowfacts.herokuapp.com/?count=1";
-var catPicURL = "http://shibe.online/api/cats?count=1&urls=true&httpsUrls=true";
+var catPicURL =
+  "https://shibe.online/api/cats?count=1&urls=true&httpsUrls=true";
 var dogFactURL = "https://dogapi.dog/api/v2/facts?limit=1";
 var dogPicURL = "https://dog.ceo/api/breeds/image/random";
 
