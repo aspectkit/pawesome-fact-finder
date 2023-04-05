@@ -13,11 +13,20 @@ WHEN I view the webpage
 THEN I can find Cat facts
 ```
 ## Desctiption
-This application is a project cre
+**Who is the audience?**: The targeted audience is animal lovers that want to learn more interesting facts about our furry friends.
 
+**What problem does it address, and how does it solve it?**: The problem addressed is to create a website where cat and dog lovers can go to enjoy animal facts. The problem is solved by creating an application that pulls from known databases to provide the user with a picture and a fact about either cats or dogs.
 
 ## Authors
 Wes Simcox
+
+Jason DeLine
+
+Ankit Dhinga
+
+Martin Trace
+
+Sayed Abdullah Sadat
 
 ## Deployment
 [Live](https://jasondeline.github.io/project-one/)
