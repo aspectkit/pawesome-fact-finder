@@ -27,6 +27,8 @@ var dogText = document.getElementById("dogText");
 var homeButton = document.getElementById("homeButton");
 var catBox = document.getElementById("catBox");
 var dogBox = document.getElementById("dogBox");
+var modeldogfact = document.getElementById('model_dog_fact');
+var modelcatfact = document.getElementById('model_cat_fact');
 
 // this function gets all the facts from local storage as an array
 function getFacts() {
@@ -122,6 +124,7 @@ async function getDogFact() {
 
   await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
   dogText.innerHTML = dogFact;
+  modeldogfact.innerHTML = dogFact;
   allFacts.push(dogFact);
   localStorage.setItem("facts", JSON.stringify(allFacts)); // adds new fact to array and to local storage
   // document.getElementById(dogText).appendChild;
@@ -163,10 +166,11 @@ async function getCatFact() {
 
   await delay(800);
   catText.innerHTML = catFact; // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
+  modelcatfact.innerHTML = catFact
   allFacts.push(catFact);
   localStorage.setItem("facts", JSON.stringify(allFacts)); // adds new fact to array and to local storage
   // document.getElementById(catText).appendChild;
-}
+  }
 
 // main function ~ adds buttons to screen and adds alt text to imgs
 $(function () {
@@ -181,6 +185,9 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
+  // getDogFact();
+  getCatFact();
+  
 };
 
 // When the user clicks on <span> (x), close the modal
