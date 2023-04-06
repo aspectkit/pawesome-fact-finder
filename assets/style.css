@@ -1,6 +1,43 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./Pics/waters-3102729_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header{
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+}
+
+#dogHeader, #catHeader{
+  font-size: 40px;
+  color: #000;
+}
+
+#dogText, #catText{
+  font-size: 30px;
+}
+
+/* Need to Fit pic to container */
+#dogImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home{
+  margin-left: 46.75%;
+  margin-bottom: 20px;
+}
+
+.home:hover{
+  transform: scale(1.3);
 }
 
 button{
@@ -10,31 +47,51 @@ button{
   font-size: 16px;
   border-radius: 8px;
   box-shadow: 0 8px 8px 0 grey;
+  letter-spacing: 1px;
 }
 button:hover {
-  background-color: #0974b2;
+  background-color: #000000b7;
   color: white;
+  cursor: pointer;
 }
 
-.header{
-    color: red;
-    font-size: 100px;
-}
-.smallNav {
-    font-size: 50px;
-}
-.smallNav:hover{
-    box-shadow: springgreen;
-}
+
 /* .imagePlaceholder{
   background: url('./') no-repeat;
   width:200px;
   height:200px;
 } */
 
-#catImg {
-      width: 50px;
-      height: 50px;
+#dogButton {
+  position: absolute;
+  bottom: 10%;
+}
+
+#catButton {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+}
+
+@keyframes pulse
+{
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0.037);
+  }
+}
+#myBtn {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+#footCred {
+ color: white;
+}
+
+#caveMan {
+  font-size: 1.5rem;
+  list-style-type: none;
 }
 
 /* ----------pop up msg for doc & cat-------------------------------------------- */
@@ -77,3 +134,8 @@ button:hover {
     cursor: pointer;
   }
   /* -------------------------------------------------------------------------------- */
+
+  /* Trace will do */
+  @media screen {
+    
+  }

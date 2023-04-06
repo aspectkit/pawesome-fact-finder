@@ -11,44 +11,46 @@
     <title>Pet Viewer</title>
   </head>
 
-  <body class="uk-heading-medium">
+<body>
 
     <h1 class="header uk-heading-line uk-text-center">
       <span>Facts Boi</span>
     </h1>
-
+    
     <nav>
-        <button id="homeButton" class="home uk-button uk-button-default uk-width-1-1 uk margin-small-button">Home</button>
+        <button id="homeButton" class="home">Home</button>
     </nav>
 
     <div id="dogBox">
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
-          <img class="hide" id="dogImg" src="./assets/Pics/unnamed.jpg" alt="" uk-cover />
+          <img class="hide" id="dogImg" src="./assets/Pics/dog-3277416_1920.jpg" alt="" uk-cover />
           <canvas width="600" height="400"></canvas>
         </div>
 
-        <div id="dogBox">
+        <div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Dogs</h3>
-            <p id="dogText">Append dog facts here</p>
+            <h3 id="dogHeader" class="uk-card-title">Dogs</h3>
+            <p id="dogText">“What do dogs do on their day off? Can’t lie around, that’s their job.” – George Carlin (comedian)</p>
             <button id="dogButton">WOOF!</button>
           </div>
         </div>  
       </div>
     </div>
 
+    <hr class="uk-divider-icon">
+
     <div id="catBox">
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-          <img id="catImg" src="./assets/Pics/download.jpg" alt="" uk-cover />
+          <img id="catImg" src="./assets/Pics/cat-914110_1920.jpg" alt="" uk-cover />
           <canvas width="600" height="400"></canvas>
         </div>
 
         <div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Cats</h3>
-            <p id="catText">Append cat facts here.</p>
+            <h3 id="catHeader" class="uk-card-title">Cats</h3>
+            <p id="catText">How about we generate some purfect facts! </p>
             <button id="catButton">MEOW!</button>
           </div>
         </div>
@@ -59,64 +61,63 @@
         <button id="myBtn">I'M FEELING LUCKY!</button>
     </div>
 
+  <footer>
+    <h4 id="footCred" class="uk-heading-line uk-text-center uk-margin-small-top">Contributor Github Pages</h4>
+    <nav class="uk-navbar-container">
+      <div class="uk-container">
+        <div class="uk-navbar-center uk-margin-xlarge-left">
+            <ul class="uk-navbar-nav uk-margin-xlarge-left">
+              <li><a href="https://github.com/JasonDeLine" target="_blank">Jason DeLine</a></li>
+              <li><a href="https://github.com/trace-martin" target="_blank">Martin Trace</a></li>
+              <li><a href="https://github.com/kitdhing" target="_blank">Ankit Dhinga</a></li>
+              <li><a href="https://github.com/WesSimcox" target="_blank">Wes Simcox</a></li>
+              <li><a href="https://github.com/Sadat4" target="_blank">Sayed Abdullah Sadat</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </footer>
 <!-- The Modal -->
-<div id="myModal" class="modal">
+      <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>
-        <!-- under this P everything will pup up -------------------------------------------------------------->
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-                <img class="imagePlaceholder" src="" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-                
-            
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Dogs</h3>
-                    <p>Append dog facts here.</p>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img class="imagePlaceholder" src="./assets/Pics/download.jpg" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Cats</h3>
-                    <p>Append cat facts here.</p>
-                   
-                </div>
-            </div>
-        </div>
-      </p>
-    </div>
-  
-  </div>
-<!-- --------------------------------------------------------------------------------------------------------- -->
-    <footer>
-      <h4 class="uk-heading-line uk-text-center uk-margin-xlarge-top">Contributor Github Pages</h4>
-      <nav class="uk-navbar-container">
-        <div class="uk-container">
-          <div class="uk-navbar-center uk-margin-xlarge-left">
-              <ul class="uk-navbar-nav uk-margin-xlarge-left">
-                <li><a href="https://github.com/JasonDeLine">Jason DeLine</a></li>
-                <li><a href="https://github.com/trace-martin">Martin Trace</a></li>
-                <li><a href="https://github.com/kitdhing">Ankit Dhinga</a></li>
-                <li><a href="https://github.com/WesSimcox">Wes Simcox</a></li>
-                <li><a href="https://github.com/Sadat4">Sayed Abdullah Sadat</a></li>
-              </ul>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          <!-- under this P everything will pup up -------------------------------------------------------------->
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+              <div class="uk-card-media-left uk-cover-container">
+                  <img class="imagePlaceholder" src="" alt="" uk-cover>
+                  <canvas width="600" height="400"></canvas>
+                  
+              
+              <div>
+                  <div class="uk-card-body">
+                      <h3 class="uk-card-title">Dogs</h3>
+                      <p>Append dog facts here.</p>
+                      
+                  </div>
+              </div>
           </div>
-        </div>
-      </nav>
-    </footer>
-  </body>
+          
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+              <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                  <img class="imagePlaceholder" src="./assets/Pics/download.jpg" alt="" uk-cover>
+                  <canvas width="600" height="400"></canvas>
+              </div>
+              <div>
+                  <div class="uk-card-body">
+                      <h3 class="uk-card-title">Cats</h3>
+                      <p>Append cat facts here.</p> 
+                  </div>
+              </div>
+          </div>
+        </p>
+      </div>   
+    </div>
+<!-- --------------------------------------------------------------------------------------------------------- -->
+
+</body>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>

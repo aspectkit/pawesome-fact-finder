@@ -36,3 +36,5 @@ Sayed Abdullah Sadat
 
 ## References
 [UiKit](https://getuikit.com/docs/introduction)
+[CODEPEN](https://codepen.io/)
+[Dog Joke](https://www.thelabradorsite.com/funny-dog-quotes/)
