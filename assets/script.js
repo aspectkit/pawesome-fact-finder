@@ -31,7 +31,12 @@ var modeldogfact = document.getElementById('model_dog_fact');
 var modelcatfact = document.getElementById('model_cat_fact');
 var modelcatimg = document.getElementById('model_cat_img')
 var modaldogimg = document.getElementById('model_dog_img');
+
+var modeldogcontainer = document.getElementById('model_dog_container');
+var modelcatcontainer = document.getElementById('model_cat_container');
+
 var dot = document.getElementById('dot');
+
 
 // this function gets all the facts from local storage as an array
 function getFacts() {
@@ -189,11 +194,38 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
+var mode = 'cat';
+
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
-  getDogFact();
-  getDogPicture()
+
+
+
+  
+
+  btn.addEventListener('click', function(){
+    if (mode === 'cat') {
+      // modeldogcontainer.style.display = 'none';
+      getCatFact();
+      getCatPicture();
+      
+
+      mode = 'dog'
+    }
+    else{
+      
+      getDogFact();
+      getDogPicture();
+      // modelcatcontainer.style.display = 'none';
+      
+      mode = 'cat'
+    }
+  })
+
+
+  // getDogFact();
+  // getDogPicture()
   // getCatFact();
   // getCatPicture();
   
