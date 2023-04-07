@@ -194,13 +194,9 @@ var mode = 'cat';
 btn.onclick = function () {
   modal.style.display = "block";
 
-
-
-  
-
-  btn.addEventListener('click', function(){
     if (mode === 'cat') {
-      // modeldogcontainer.style.display = 'none';
+      modeldogcontainer.style.display = 'none';
+      modelcatcontainer.style.display = 'block';
       getCatFact();
       getCatPicture();
       
@@ -208,22 +204,16 @@ btn.onclick = function () {
       mode = 'dog'
     }
     else{
-      
+      modelcatcontainer.style.display = 'none';
+      modeldogcontainer.style.display = 'block';
+
       getDogFact();
       getDogPicture();
-      // modelcatcontainer.style.display = 'none';
+      
       
       mode = 'cat'
     }
-  })
-
-
-  // getDogFact();
-  // getDogPicture()
-  // getCatFact();
-  // getCatPicture();
-  
-};
+  } 
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
