@@ -31,6 +31,7 @@ var modeldogfact = document.getElementById('model_dog_fact');
 var modelcatfact = document.getElementById('model_cat_fact');
 var modelcatimg = document.getElementById('model_cat_img')
 var modaldogimg = document.getElementById('model_dog_img');
+var dot = document.getElementById('dot');
 
 // this function gets all the facts from local storage as an array
 function getFacts() {
@@ -57,6 +58,7 @@ catButton.addEventListener("click", function () {
   getCatPicture();
   getCatFact();
   dogBox.style.display = "none";
+  dot.style.display = "none";
 });
 
 dogButton.addEventListener("click", function () {
@@ -65,6 +67,7 @@ dogButton.addEventListener("click", function () {
   getDogPicture();
   getDogFact();
   catBox.style.display = "none";
+  dot.style.display = "none";
 });
 
 luckyButton.addEventListener("click", function () {
