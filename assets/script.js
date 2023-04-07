@@ -29,6 +29,8 @@ var catBox = document.getElementById("catBox");
 var dogBox = document.getElementById("dogBox");
 var modeldogfact = document.getElementById('model_dog_fact');
 var modelcatfact = document.getElementById('model_cat_fact');
+var modelcatimg = document.getElementById('model_cat_img')
+var modaldogimg = document.getElementById('model_dog_img');
 
 // this function gets all the facts from local storage as an array
 function getFacts() {
@@ -102,6 +104,7 @@ async function getDogPicture() {
   await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the src attribute while dogPic is empty
 
   dogImg.setAttribute("src", dogPic);
+  modaldogimg.setAttribute("src",dogPic);
   // document.body.appendChild(dogImg);
 }
 
@@ -144,6 +147,7 @@ async function getCatPicture() {
     });
   await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
   catImg.setAttribute("src", catPic);
+  modelcatimg.setAttribute("src",catPic);
   // document.body.appendChild(catImg);
 }
 
@@ -185,8 +189,10 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
-  // getDogFact();
-  getCatFact();
+  getDogFact();
+  getDogPicture()
+  // getCatFact();
+  // getCatPicture();
   
 };
 
