@@ -194,18 +194,22 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
+var modalDgBtn = document.getElementById('modalDogButton');
+var modalCtBtn = document.getElementById('modelCatButton');
+
 var mode = 'cat';
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
 
+// When the user clicks the button, open the modal
+btn.onclick = function modalInfo() {
+  modal.style.display = "block";
+  console.log(mode)
     if (mode === 'cat') {
       modeldogcontainer.style.display = 'none';
       modelcatcontainer.style.display = 'block';
-      getCatFact();
-      getCatPicture();
       
+      modalGetCatFact();
+      modalGetCatPicture();
 
       mode = 'dog'
     }
@@ -213,10 +217,9 @@ btn.onclick = function () {
       modelcatcontainer.style.display = 'none';
       modeldogcontainer.style.display = 'block';
 
-      getDogFact();
-      getDogPicture();
-      
-      
+      modalGetDogFact();
+      modalGetDogPicture();
+
       mode = 'cat'
     }
   } 
@@ -233,3 +236,128 @@ window.onclick = function (event) {
   }
 };
 // -----------------------------------------------------------------------
+
+
+// model functions.. keeps background display from populating
+async function modalGetDogFact() {
+  console.log("DOG FACT!");
+
+  do {
+    // does once to get a fact and then keeps getting facts if the fact is already in local storage ~ loop ends when its a new fact
+    fetch(dogFactURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        // console.log(data);
+        dogFact = data.data[0].attributes.body;
+        console.log("Here is the dog fact: " + dogFact);
+      });
+  } while (dogFact in allFacts);
+
+  await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
+  modeldogfact.innerHTML = dogFact;
+  allFacts.push(dogFact);
+  localStorage.setItem("facts", JSON.stringify(allFacts)); // adds new fact to array and to local storage
+  // document.getElementById(dogText).appendChild;
+}
+async function modalGetDogPicture() {
+  console.log("DOG PICTURE!");
+  fetch(dogPicURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // console.log(data);
+      dogPic = data.message;
+      console.log("Here is the dog picture: " + dogPic);
+    });
+
+  await delay(800);
+  modaldogimg.setAttribute("src",dogPic);
+  modaldogimg.setAttribute('class', '')
+  // document.body.appendChild(dogImg);
+}
+async function modalGetCatFact() {
+  console.log("CAT FACT!");
+
+  do {
+    // does once to get a fact and then keeps getting facts if the fact is already in local storage ~ loop ends when its a new fact
+    fetch(catFactURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        // console.log(data);
+        catFact = data.data[0];
+        console.log("Here is the cat fact: " + catFact);
+      });
+  } while (catFact in allFacts);
+
+  // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
+  await delay(800);
+  modelcatfact.innerHTML = catFact
+  allFacts.push(catFact);
+  localStorage.setItem("facts", JSON.stringify(allFacts)); // adds new fact to array and to local storage
+  // document.getElementById(catText).appendChild;
+}
+async function modalGetCatPicture() {
+  console.log("CAT PICTURE!");
+  fetch(catPicURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // console.log(data);
+      catPic = data[0];
+      console.log("Here is the cat picture: " + catPic);
+    });
+  await delay(800); 
+  modelcatimg.setAttribute("src",catPic);
+  // document.body.appendChild(catImg);
+}
+
+// adds functionality to btn's inside modal
+modalDgBtn = function modalDgBtn() {
+  if (mode === 'cat') {
+    modeldogcontainer.style.display = 'none';
+    modelcatcontainer.style.display = 'block';
+    
+    modalGetCatFact();
+    modalGetCatPicture();
+
+    mode = 'dog'
+  }
+  else{
+    modelcatcontainer.style.display = 'none';
+    modeldogcontainer.style.display = 'block';
+
+    modalGetDogFact();
+    modalGetDogPicture();
+
+    mode = 'cat'
+  }
+} 
+
+modalCtBtn = function modalCtBt() {
+    modal.style.display = "block";
+  
+      if (mode === 'cat') {
+        modeldogcontainer.style.display = 'none';
+        modelcatcontainer.style.display = 'block';
+        
+        modalGetCatFact();
+        modalGetCatPicture();
+  
+        mode = 'dog'
+      }
+      else{
+        modelcatcontainer.style.display = 'none';
+        modeldogcontainer.style.display = 'block';
+  
+        modalGetDogFact();
+        modalGetDogPicture();
+  
+        mode = 'cat'
+      }
+} 
