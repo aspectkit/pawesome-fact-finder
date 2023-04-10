@@ -5,52 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/css/uikit.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/css/uikit.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.13/dist/js/uikit-icons.min.js"></script>
     <title>Pet Facts</title>
   </head>
 
-<body>
-
+  <body>
     <h1 class="header uk-heading-line uk-text-center">
       <span>Pawsome! Fact Finder</span>
     </h1>
-    
+
     <nav>
-        <button id="homeButton" class="home">Home</button>
+      <button id="homeButton" class="home">Home</button>
     </nav>
 
     <div id="dogBox">
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div
+        class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+        uk-grid
+      >
         <div class="uk-card-media-left uk-cover-container">
-          <img class="hide" id="dogImg" src="./assets/Pics/dog-3277416_1920.jpg" alt="" uk-cover />
+          <img
+            class="hide"
+            id="dogImg"
+            src="./assets/Pics/dog-3277416_1920.jpg"
+            alt=""
+            uk-cover
+          />
           <canvas width="600" height="400"></canvas>
         </div>
 
         <div>
           <div class="uk-card-body">
             <h3 class="cardTitle uk-card-title">Dogs</h3>
-            <p id="dogText">“What do dogs do on their day off? Can’t lie around, that’s their job.” – George Carlin (comedian)</p>
+            <p id="dogText">
+              “What do dogs do on their day off? Can’t lie around, that’s their
+              job.” – George Carlin (comedian)
+            </p>
             <button id="dogButton">WOOF!</button>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
 
-    <hr id="dot" class="uk-divider-icon">
+    <hr id="dot" class="uk-divider-icon" />
 
     <div id="catBox">
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div
+        class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+        uk-grid
+      >
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-          <img id="catImg" src="./assets/Pics/cat-914110_1920.jpg" alt="" uk-cover />
+          <img
+            id="catImg"
+            src="./assets/Pics/cat-914110_1920.jpg"
+            alt=""
+            uk-cover
+          />
           <canvas width="600" height="400"></canvas>
         </div>
 
         <div>
           <div class="uk-card-body">
             <h3 class="cardTitle uk-card-title">Cats</h3>
-            <p id="catText">How about we generate some purfect facts! </p>
+            <p id="catText">How about we generate some purfect facts!</p>
             <button id="catButton">MEOW!</button>
           </div>
         </div>
@@ -58,75 +80,125 @@
     </div>
 
     <div class="uk-heading-line uk-text-center">
-        <button id="myBtn">CAN'T DECIDE?</button>
+      <button id="myBtn">CAN'T DECIDE?</button>
     </div>
 
-  <footer>
-    <h4 id="footCred" class="uk-heading-line uk-text-center uk-margin-small-top">Contributor Github Pages</h4>
-    <nav class="uk-navbar-container">
-      <div class="uk-container">
-        <div class="uk-navbar-center uk-margin-xlarge-left">
+    <footer>
+      <h4
+        id="footCred"
+        class="uk-heading-line uk-text-center uk-margin-small-top"
+      >
+        Contributor Github Pages
+      </h4>
+      <nav class="uk-navbar-container">
+        <div class="uk-container">
+          <div class="uk-navbar-center uk-margin-xlarge-left">
             <ul id="footerMedia" class="uk-navbar-nav uk-margin-xlarge-left">
-              <li><a href="https://github.com/JasonDeLine" target="_blank">Jason DeLine</a></li>
-              <li><a href="https://github.com/trace-martin" target="_blank">Martin Trace</a></li>
-              <li><a href="https://github.com/kitdhing" target="_blank">Ankit Dhinga</a></li>
-              <li><a href="https://github.com/WesSimcox" target="_blank">Wes Simcox</a></li>
-              <li><a href="https://github.com/Sadat4" target="_blank">Sayed Abdullah Sadat</a></li>
+              <li>
+                <a href="https://github.com/JasonDeLine" target="_blank"
+                  >Jason DeLine</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/trace-martin" target="_blank"
+                  >Trace Martin</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/kitdhing" target="_blank"
+                  >Ankit Dhinga</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/WesSimcox" target="_blank"
+                  >Wes Simcox</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Sadat4" target="_blank"
+                  >Sayed Abdullah Sadat</a
+                >
+              </li>
             </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </footer>
-<!-- The Modal -->
+      </nav>
+    </footer>
+    <!-- The Modal -->
     <div id="myModal" class="modal uk-flex-top">
-
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <div>
           <!-- under this P everything will pup up -------------------------------------------------------------->
-          
+
           <div id="model_dog_container">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div
+              class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+              uk-grid
+            >
               <div class="uk-card-media-left uk-cover-container">
-                <img class="hide" id="model_dog_img" src="./assets/Pics/dog-3277416_1920.jpg" alt="" uk-cover />
+                <img
+                  class="hide"
+                  id="model_dog_img"
+                  src="./assets/Pics/dog-3277416_1920.jpg"
+                  alt=""
+                  uk-cover
+                />
                 <canvas width="600" height="400"></canvas>
               </div>
-      
+
               <div>
                 <div class="uk-card-body">
                   <h3 class="cardTitle uk-card-title">Dogs</h3>
-                  <p id="model_dog_fact">“What do dogs do on their day off? Can’t lie around, that’s their job.” – George Carlin (comedian)</p>
-                  <button id="modalDogButton" onclick="modalDgBtn()">WOOF!</button>
+                  <p id="model_dog_fact">
+                    “What do dogs do on their day off? Can’t lie around, that’s
+                    their job.” – George Carlin (comedian)
+                  </p>
+                  <button id="modalDogButton" onclick="modalDgBtn()">
+                    WOOF!
+                  </button>
                 </div>
-              </div>  
+              </div>
             </div>
           </div>
 
           <div id="model_cat_container">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-              <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img id="model_cat_img" src="./assets/Pics/cat-914110_1920.jpg" alt="" uk-cover />
+            <div
+              class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+              uk-grid
+            >
+              <div
+                class="uk-flex-last@s uk-card-media-right uk-cover-container"
+              >
+                <img
+                  id="model_cat_img"
+                  src="./assets/Pics/cat-914110_1920.jpg"
+                  alt=""
+                  uk-cover
+                />
                 <canvas width="600" height="400"></canvas>
               </div>
-      
+
               <div>
                 <div class="uk-card-body">
                   <h3 class="cardTitle uk-card-title">Cats</h3>
-                  <p id="model_cat_fact">How about we generate some purfect facts! </p>
-                  <button id="modalCatButton" onclick="modalCtBtn()">MEOW!</button>
+                  <p id="model_cat_fact">
+                    How about we generate some purfect facts!
+                  </p>
+                  <button id="modalCatButton" onclick="modalCtBtn()">
+                    MEOW!
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>   
+      </div>
     </div>
-<!-- --------------------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------------------- -->
+  </body>
 
-</body>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>
-  </html>
+</html>
