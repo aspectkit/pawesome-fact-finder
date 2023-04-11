@@ -226,17 +226,11 @@ button{
   transform: scale(0.5, 0.5);
 }
 
-#dogButton {
+#dogButton, #catButton {
   position: absolute;
   bottom: 0;
   left: 33%;
   
-}
-
-#catButton {
-  position: absolute;
-  bottom: 0;
-  left: 33%;
 }
 
 #footerMedia {
