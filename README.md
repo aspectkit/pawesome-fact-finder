@@ -42,11 +42,11 @@ We are currently planning to add more animals to the fact generator. This includ
 
 ## Deployment
 
-[Live](https://jasondeline.github.io/project-one/)
+[Live](https://jasondeline.github.io/pawesome-fact-finder/)
 
 ## Repository
 
-[github](https://github.com/JasonDeLine/project-one)
+[github](https://github.com/JasonDeLine/pawesome-fact-finder)
 
 ## References
 
