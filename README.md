@@ -3,17 +3,17 @@
 ## User Story
 
 ```
-As A wanna be pet owner
-I WANT a data base that will show me facts about each species
-SO THAT I can make an educated decision on which species I want.
+As a common household pet (dog/cat) enthusiast
+I WANT a data base that will show me facts about each species.
+SO THAT I can have a deeper understanding of both species.
 ```
 
 ## Acceptance Criteria
 
 ```
-GIVEN a webpage about cat/dog facts
-WHEN I view the webpage
-THEN I can find Cat facts
+GIVEN a webpage about cat/dog facts.
+WHEN I view the webpage.
+THEN I can find Cat or dog facts.
 ```
 
 ## Desctiption
@@ -22,7 +22,7 @@ This website is built using JavaScript, HTML, and CSS. The sites function is to 
 
 **Who is the audience?**: The targeted audience is animal lovers that want to learn more interesting facts about our furry friends.
 
-**What problem does it address, and how does it solve it?**: The problem addressed is to create a website where cat and dog lovers can go to enjoy animal facts. The problem is solved by creating an application that pulls from known databases to provide the user with a picture and a fact about either cats or dogs.
+**What problem does it address, and how does it solve it?**: The problem addressed is the lack of an website where cat and dog lover can be provided with cat and dog facts. The problem is solved by creating an application that pulls from known databases to provide the user with a picture and a fact about either cats or dogs.
 
 ## Roadmap
 
@@ -34,9 +34,9 @@ We are currently planning to add more animals to the fact generator. This includ
 
 **Jason DeLine**
 
-**Ankit Dhinga**
+**Ankit Dhingra**
 
-**Martin Trace**
+**Trace Martin**
 
 **Sayed Abdullah Sadat**
 
@@ -51,12 +51,16 @@ We are currently planning to add more animals to the fact generator. This includ
 ## References
 
 [UiKit](https://getuikit.com/docs/introduction)
+
 [CODEPEN](https://codepen.io/)
+
 [Dog Joke](https://www.thelabradorsite.com/funny-dog-quotes/)
 
 ## APIs
+[MeowFacts](https://meowfacts.herokuapp.com/?count=1)
 
-https://meowfacts.herokuapp.com/?count=1
-https://shibe.online/api/cats?count=1&urls=true&httpsUrls=true
-https://dogapi.dog/api/v2/facts?limit=1
-https://dog.ceo/api/breeds/image/random
+[Shibe.online](https://shibe.online/api/cats?count=1&urls=true&httpsUrls=true)
+
+[dogapi.dog](https://dogapi.dog/api/v2/facts?limit=1)
+
+[dog.ceo](https://dog.ceo/api/breeds/image/random)
