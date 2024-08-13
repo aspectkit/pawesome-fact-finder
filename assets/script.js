@@ -148,7 +148,7 @@ async function getCatPicture() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      console.log("Here is the cat data: " + data);
       catPic = data[0].url;
       console.log("Here is the cat picture: " + catPic);
     });
