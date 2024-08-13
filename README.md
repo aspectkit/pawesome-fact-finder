@@ -34,11 +34,11 @@ We are currently planning to add more animals to the fact generator. This includ
 
 ## Deployment
 
-[Live](https://jasondeline.github.io/pawesome-fact-finder/)
+[Live](https://aspectkit.github.io/pawesome-fact-finder/)
 
 ## Repository
 
-[github](https://github.com/JasonDeLine/pawesome-fact-finder)
+[github](https://github.com/aspectkit/pawesome-fact-finder)
 
 ## References
 
@@ -51,7 +51,7 @@ We are currently planning to add more animals to the fact generator. This includ
 ## APIs
 [MeowFacts](https://meowfacts.herokuapp.com/?count=1)
 
-[Shibe.online](https://shibe.online/api/cats?count=1&urls=true&httpsUrls=true)
+[TheCatAPI](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t)
 
 [dogapi.dog](https://dogapi.dog/api/v2/facts?limit=1)
 
