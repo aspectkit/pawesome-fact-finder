@@ -1,6 +1,6 @@
 // urls to api calls
 var catFactURL = "https://meowfacts.herokuapp.com/?count=1";
-var catPicURL = "https://cataas.com/cat";
+var catPicURL = "https://api.thecatapi.com/v1/images/search";
 var dogFactURL = "https://dogapi.dog/api/v2/facts?limit=1";
 var dogPicURL = "https://dog.ceo/api/breeds/image/random";
 
@@ -149,7 +149,7 @@ async function getCatPicture() {
     })
     .then(function (data) {
       // console.log(data);
-      catPic = data[0];
+      catPic = data.url;
       console.log("Here is the cat picture: " + catPic);
     });
   await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
