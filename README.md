@@ -30,15 +30,7 @@ We are currently planning to add more animals to the fact generator. This includ
 
 ## Authors
 
-**Wes Simcox**
-
-**Jason DeLine**
-
-**Ankit Dhingra**
-
-**Trace Martin**
-
-**Sayed Abdullah Sadat**
+**Aspect & Bootcamp Team**
 
 ## Deployment
 
