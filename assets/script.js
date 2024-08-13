@@ -309,6 +309,7 @@ async function modalGetCatPicture() {
     .then(function (data) {
       // console.log(data);
       catPic = data[0];
+      catPic = catPic.url;
       console.log("Here is the cat picture: " + catPic);
     });
   await delay(800); 
