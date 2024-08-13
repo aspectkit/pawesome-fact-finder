@@ -149,8 +149,7 @@ async function getCatPicture() {
     })
     .then(function (data) {
       catPic = data[0].url;
-      let catData = data;
-      console.log("Here is the cat picture: " + catPic + catData);
+      console.log("Here is the cat picture: " + catPic);
     });
   await delay(800); // delay is here to ensure the call to the api is complete otherwise we might set the attribute while data is empty
   catImg.setAttribute("src", catPic);
